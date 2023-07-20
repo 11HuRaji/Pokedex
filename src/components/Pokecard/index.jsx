@@ -1,9 +1,9 @@
-function Pokecard({ name, imageURL, type }) {
+function Pokecard({ name, image, type }) {
   return (
     <>
       <div className="pokecard" role="figure">
         <h2 className="pokemon-name">{name}</h2>
-        <img src={imageURL} alt={`An image of ${name}`} />
+        <img src={image} alt={`An image of ${name}`} />
         <div className="pokemon-type">Type: {type}</div>
       </div>
     </>

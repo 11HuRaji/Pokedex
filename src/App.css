@@ -65,3 +65,9 @@ h1 {
 .pokemon-type {
   font-weight: 600;
 }
+
+.pokemon-pages {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}

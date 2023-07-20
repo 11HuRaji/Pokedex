@@ -9,7 +9,9 @@ function PokemonForm({ pokeData, setPokeData }) {
     if (!pokemonName) return;
     axios
       .get(`https://pokeapi.co/api/v2/pokemon/${pokemonName.toLowerCase()}`)
-      .then(({ data }) => {
+      .then((res) => {
+        const { data } = res;
+
         setPokeData([
           ...pokeData,
           {

@@ -17,7 +17,7 @@ describe("Pokecard component", () => {
     render(
       <Pokecard
         name={"Charmander"}
-        imageURL={
+        image={
           "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/4.png"
         }
         type={"fire"}

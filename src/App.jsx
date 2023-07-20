@@ -1,16 +1,20 @@
 import { useState } from "react";
-import { Pokedex, PokemonForm } from "./components";
-import presetData from "./data/pokedata.json";
+import { Routes, Route } from "react-router-dom";
+import { MyPokedex, AllPokemon } from "./pages";
+import { PokedexProvider } from "./contexts/usePokedex";
+import { Nav } from "./layouts";
 import "./App.css";
 
 function App() {
-  const [pokeData, setPokeData] = useState(presetData);
   return (
-    <>
-      <h1>Pokedex</h1>
-      <PokemonForm pokeData={pokeData} setPokeData={setPokeData} />
-      <Pokedex pokeData={pokeData} />
-    </>
+    <PokedexProvider>
+      <Routes>
+        <Route path="/" element={<Nav />}>
+          <Route index element={<AllPokemon />} />
+          <Route path="mypokedex" element={<MyPokedex />} />
+        </Route>
+      </Routes>
+    </PokedexProvider>
   );
 }
 

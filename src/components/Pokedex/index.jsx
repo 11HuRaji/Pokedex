@@ -6,9 +6,10 @@ function Pokedex({pokeData}) {
       <div className="pokedex">
         {pokeData.map((pokeObj) => (
           <Pokecard
+            key={pokeObj.name}
             name={pokeObj.name}
             type={pokeObj.type}
-            imageURL={pokeObj.image}
+            image={pokeObj.image}
           />
         ))}
       </div>
